@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'io.michaelrocks:libphonenumber-android:8.1.0'
+}
+
+ext {
+    bintrayRepo = 'android-libraries'
+    bintrayName = 'utils-plus'
+
+    publishedGroupId = 'com.github.rrsystems'
+    libraryName = 'utilsplus'
+    artifact = 'utilsplus'
+
+    libraryDescription = 'A libary which contains usefull utility tools.'
+
+    siteUrl = 'https://github.com/rakshithsj30/UtilsPlus'
+    gitUrl = 'https://github.com/rakshithsj30/UtilsPlus.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'rakshithsj30'
+    developerName = 'Rakshith Shetty'
+    developerEmail = 'rakshithsj30@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "979459244103",
+    "firebase_url": "https://bit-cricket.firebaseio.com",
+    "project_id": "bit-cricket",
+    "storage_bucket": "bit-cricket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979459244103:android:7ada952a65e57099",
+        "android_client_info": {
+          "package_name": "com.sampleapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979459244103-oo5e242bdnpo1l1e3mhp9idb77cvshl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2wW8Yu0FfFt4jIT4gTWqCzUYI9YsyimA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
