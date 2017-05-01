@@ -50,9 +50,6 @@ UtilsPlus.getInstance().getRandomString();
 
 ### How to display a simple push notification?
 ```
- UtilsPlus.getInstance().displaySimplePushNotification("New Mesage","new message received",R.drawable.photo,R.drawable.photo,MainActivity.class,true);
-
-```
  /*
      * Utility method which will help you to show notification in the status bar.
      * @param title title of the push notification
@@ -62,3 +59,9 @@ UtilsPlus.getInstance().getRandomString();
      * @param class_name The  activity which will open on clicking notification. Parameter format: activity_name.class
      * @param autoCancel true or false. if set to true, notification will be disappeared after clicking it otherwise it will remain in the status bar
      */
+     
+
+ UtilsPlus.getInstance().displaySimplePushNotification("New Mesage","new message received",R.drawable.photo,R.drawable.photo,MainActivity.class,true);
+
+```
+
