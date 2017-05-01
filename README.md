@@ -90,7 +90,7 @@ UtilsPlus.getInstance().getDeviceID();
 ```
 ### How to check whether a service created by your app is running or not?
 ```
-UtilsPlus.getInstance().checkServiceIsRunning("service1.class");
+UtilsPlus.getInstance().checkServiceIsRunning(service1.class);
 ```
 
 ### How to convert drawable image into bitmap?
