@@ -34,3 +34,31 @@ UtilsPlus.getInstance().copyToClipboard("text to be copied");
   Log.d("utils plus","no internet connection");
  }
  ```
+### How to check whether the string is a valid email id or not?
+```
+ UtilsPlus.getInstance().checkEmailIsValid("rakshithsj30@gmail.com");
+```
+### How to check whether the string is a valid phone number or not?
+``` 
+// second parameter is country code
+UtilsPlus.getInstance().validatePhoneNumber("9480523270","91");
+```
+### How to generate a random string?
+```
+UtilsPlus.getInstance().getRandomString();
+```
+
+### How to display a simple push notification?
+```
+ UtilsPlus.getInstance().displaySimplePushNotification("New Mesage","new message received",R.drawable.photo,R.drawable.photo,MainActivity.class,true);
+
+```
+ /*
+     * Utility method which will help you to show notification in the status bar.
+     * @param title title of the push notification
+     * @param body content to be displayed in the notification
+     * @param small_icon small icon which will be showed in the notification. should be of following format:R.drawable.imageName
+     * @param large_icon Large icon which will be showed in the notification. should be of following format:R.drawable.imageName
+     * @param class_name The  activity which will open on clicking notification. Parameter format: activity_name.class
+     * @param autoCancel true or false. if set to true, notification will be disappeared after clicking it otherwise it will remain in the status bar
+     */
