@@ -64,4 +64,17 @@ UtilsPlus.getInstance().getRandomString();
  UtilsPlus.getInstance().displaySimplePushNotification("New Mesage","new message received",R.drawable.photo,R.drawable.photo,MainActivity.class,true);
 
 ```
+### How to send an email using email clients installed in the device?
+```
+  UtilsPlus.getInstance().sendEmail("Intent chooser title", "Email title", "Email body", "recipient1@xyz.com", "recipient2@abc.com");
+```
+### How to encypt and decrypt a string?
+encrypting a string:
+```
+UtilsPlus.getInstance().encryptIt("secret key", "string to be encrypted");
 
+```
+decrypting a string:
+```
+UtilsPlus.getInstance().decryptIt("secret key", "string to be decrypted");
+```
