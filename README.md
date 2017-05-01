@@ -78,3 +78,29 @@ decrypting a string:
 ```
 UtilsPlus.getInstance().decryptIt("secret key", "string to be decrypted");
 ```
+### How to get IMEI Code of the device?
+To make this code work, you need to specify relevant permissions in android manifest. For mashmallow and above, user has to grant permissions.
+```
+ UtilsPlus.getInstance().getIMEICode();
+```
+### How to get device id of the device?
+To make this code work, you need to specify relevant permissions in android manifest. For mashmallow and above, user has to grant permissions.
+```
+UtilsPlus.getInstance().getDeviceID();
+```
+### How to check whether a service created by your app is running or not?
+```
+UtilsPlus.getInstance().checkServiceIsRunning("service1.class");
+```
+
+### How to convert drawable image into bitmap?
+```
+UtilsPlus.getInstance().drawableToBitmap(drawable);
+```
+
+### How to use shared preference?
+
+
+
+
+
