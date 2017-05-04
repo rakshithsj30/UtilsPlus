@@ -100,6 +100,42 @@ UtilsPlus.getInstance().drawableToBitmap(drawable);
 
 ### How to use shared preference?
 
+Save using string as a key
+```
+ UtilsPlus.getInstance().put("my_key", "some value");
+ UtilsPlus.getInstance().put("my_key", 10);
+  UtilsPlus.getInstance().put("my_key", true);
+ ```
+ Retriveing the value using key
+ ```
+ UtilsPlus.getInstance().getString("key", "default");
+  UtilsPlus.getInstance().getInt("key", 0);
+    UtilsPlus.getInstance().getBoolean("key", false);
+ ```
+ Removing a preference using key
+ ```
+  UtilsPlus.getInstance().removeKey("key");
+ ```
+ Clearing shared preference
+ ```
+  UtilsPlus.getInstance().clear();
+ ```
+ 
+ ### Saving an image to internal storage
+ 
+ ```
+ bitmap --> image in the form of bitmap
+ image_name --> name of the image
+ format --> either png or jpg
+ image path --> path in which image to be stored
+ quality --> quality of the image
+  String path = UtilsPlus.getInstance().SaveImage(bitmap, "image_name", "png", "path/in/which/image/to/be/stored", 20,false);
+  
+  
+ ```
+  
+ 
+ 
 
 
 
