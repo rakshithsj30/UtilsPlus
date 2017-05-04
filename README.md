@@ -4,7 +4,7 @@ Android utility library which contains usefull utility classes with simple reusa
 ## Adding to your project:
 To start using this library, add these lines to the build.gradle of your project:
 ```
-compile 'com.github.rrsystems:utilsplus:1.0.0'
+compile 'com.github.rrsystems:utilsplus:1.1.0'
 ```
 
 ### Initialize the libray in your application class
@@ -121,14 +121,15 @@ Save using string as a key
   UtilsPlus.getInstance().clear();
  ```
  
- ### Saving an image to internal storage
+ ### Saving an image to internal storage 
  
 
- bitmap --> image in the form of bitmap
- image_name --> name of the image
- format --> either png or jpg
- image path --> path in which image to be stored
- quality --> quality of the image
+ bitmap --> image in the form of bitmap </br>
+ image_name --> name of the image  <br>
+ format --> either png or jpg <br>
+ image path --> path in which image to be stored<br>
+ quality --> quality of the image <br>
+ 
  ```
   String path = UtilsPlus.getInstance().SaveImage(bitmap, "image_name", "png", "path/in/which/image/to/be/stored", 20,false);
   
