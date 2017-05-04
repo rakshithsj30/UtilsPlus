@@ -123,12 +123,13 @@ Save using string as a key
  
  ### Saving an image to internal storage
  
- ```
+
  bitmap --> image in the form of bitmap
  image_name --> name of the image
  format --> either png or jpg
  image path --> path in which image to be stored
  quality --> quality of the image
+ ```
   String path = UtilsPlus.getInstance().SaveImage(bitmap, "image_name", "png", "path/in/which/image/to/be/stored", 20,false);
   
   
