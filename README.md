@@ -130,15 +130,72 @@ Save using string as a key
  image path --> path in which image to be stored<br>
  quality --> quality of the image <br>
  
+ this method returns absolute path of the saved image.
+ 
  ```
   String path = UtilsPlus.getInstance().SaveImage(bitmap, "image_name", "png", "path/in/which/image/to/be/stored", 20,false);
   
   
  ```
   
- 
- 
+### Code Verifier
+Copy verification code from SMS automatically.
 
+Activity class should implement  SMSReceiver.SMSListener.
 
+For example,
+```
+public class MainActivity extends AppCompatActivity implements SMSReceiver.SMSListener {
+
+................
+.................
+
+}
+```
+
+Create Broadcast Receiver like this 
+```
+
+SMSReceiver smsReceiver = new SMSReceiver();
+
+```
+OnResume method of activty class add this line
+
+```
+        smsReceiver.registerReceiver(this, smsReceiver, "TM-bytwoo", "9480523270","specify 3rd phone number here");
+        smsReceiver.setSMSListener(this);
+```
+
+Using onSMSReceived(....) method, parse the verification code 
+
+for example, if you want to parse verification code from this sms, "201232 is your One Time Password"  then we should write this code 
+
+```
+   @Override
+    public void onSMSReceived(String phone_no, String message) {
+
+// 1st parameter ---> message
+// second parameter ---> position of first character of the OTP
+// second parameter ---> position of character after last character (includes white space) of OTP
+
+    Strng OTP = smsReceiver.extractCode(message, 0, -999);
+    
+    }
+   
+```
+
+Unregister BroadCast Receiver in your activities OnPause() method.
+
+```
+  @Override
+    protected void onPause() {
+        super.onPause();
+        if (smsReceiver!=null) {
+            smsReceiver.unregisterReceiver(this, smsReceiver);
+        }
+
+    }
+
+```
 
 
